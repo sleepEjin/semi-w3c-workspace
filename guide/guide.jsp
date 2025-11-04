@@ -1,4 +1,4 @@
-<!-- 진료안내 페이지 -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,9 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>진료안내 - MediFlow</title>
   <link rel="stylesheet" href="styles/guide.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common/homePage/header.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common/homePage/main.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common/homePage/footer.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/common/homePage/index.css">
 </head>
 <body>
-  <!-- Header와 Sidebar는 include 예정 -->
+  <!-- Header Include -->
+<jsp:include page="common/homePageMember/header_member.jsp" />
   
   <main class="guide-main">
     <!-- 메인 콘텐츠 -->
@@ -117,6 +126,7 @@
     </section>
   </main>
 
-  <!-- Footer는 include 예정 -->
+  <!-- Footer include-->
+   <jsp:include page="common/homePageFooter/footer.jsp" />
 </body>
 </html>
