@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>병원 ERP 시스템 - 공지사항 작성</title>
+  <link rel="stylesheet" href="styles/write-notice.css">
+</head>
+<body>
+  <!-- 병원 ERP 시스템 > 공지사항 작성 페이지 -->
+  <main class="notice-create-main">
+    <!-- 페이지 헤더 -->
+    <div class="notice-create-header">
+      <h1 class="notice-create-title">커뮤니티</h1>
+    </div>
+
+    <!-- 통계 카드 섹션 -->
+    <section class="notice-create-stats">
+      <div class="stat-card">
+        <div class="stat-icon stat-icon-notification">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 8A6 6 0 1 0 6 8c0 7-3 9-3 9h18s-3-2-3-9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <span class="stat-label">공지사항</span>
+          <span class="stat-count">12건</span>
+        </div>
+        <span class="stat-badge stat-badge-increase">+3</span>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon stat-icon-folder">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 7v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-9l-2-2H5a2 2 0 0 0-2 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <span class="stat-label">대기 중 문의</span>
+          <span class="stat-count">8건</span>
+        </div>
+        <span class="stat-badge stat-badge-increase">+2</span>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon stat-icon-check">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <span class="stat-label">처리 완료</span>
+          <span class="stat-count">45건</span>
+        </div>
+        <span class="stat-badge stat-badge-increase">+12</span>
+      </div>
+    </section>
+
+    <!-- 공지사항 작성 폼 -->
+    <section class="notice-form-section">
+      <div class="notice-form-tabs">
+        <button class="form-tab form-tab-active">공지사항 작성하기</button>
+      </div>
+
+      <form class="notice-form">
+        <!-- 대상, 분류, 중요도, 분류 -->
+        <div class="form-row">
+          <div class="form-group form-group-target">
+            <label class="form-label">
+              <span class="label-text">대상</span>
+            </label>
+            <select class="form-select">
+              <option value="all">전체</option>
+              <option value="patient">환자</option>
+              <option value="employee">직원</option>
+            </select>
+          </div>
+
+          <div class="form-group form-group-category">
+            <label class="form-label">
+              <span class="label-text">부서</span>
+            </label>
+            <select class="form-select">
+              <option value="">부서1</option>
+              <option value="">부서2</option>
+              <option value="">부서3</option>
+              <option value="">부서4</option>
+            </select>
+          </div>
+
+          <div class="form-group form-group-priority">
+            <label class="form-label">
+              <span class="label-text">중요도</span>
+            </label>
+            <select class="form-select">
+              <option value="">중요도</option>
+              <option value="high">높음</option>
+              <option value="medium">보통</option>
+              <option value="low">낮음</option>
+            </select>
+          </div>
+
+          <div class="form-group form-group-type">
+            <label class="form-label">
+              <span class="label-text">분류</span>
+            </label>
+            <select class="form-select">
+              <option value="">분류</option>
+              <option value="urgent">긴급</option>
+              <option value="general">일반</option>
+              <option value="info">정보</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- 제목 -->
+        <div class="form-group">
+          <label class="form-label">
+            <span class="label-text">제목</span>
+          </label>
+          <input type="text" class="form-input" placeholder="제목을 입력해주세요">
+        </div>
+
+        <!-- 내용 -->
+        <div class="form-group">
+          <label class="form-label">
+            <span class="label-text">내용</span>
+          </label>
+          <textarea class="form-textarea" placeholder="내용을 입력하세요." rows="8"></textarea>
+        </div>
+
+        <!-- 제출 버튼 -->
+        <button type="submit" class="btn-submit">공지사항 등록</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
