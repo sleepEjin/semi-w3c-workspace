@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>병원 ERP 시스템 - 공지사항</title>
+  <title>병원 ERP 시스템 - 문의사항</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- 메인 페이지 -->
-  <main class="community-main">
-    <div class="community-header">
-      <h1 class="community-title">커뮤니티</h1>
-      <button class="btn-primary" id="createNoticeBtn">
+  <main class="inquiry-main">
+    <div class="inquiry-header">
+      <h1 class="inquiry-title">커뮤니티</h1>
+      <button class="btn-primary" id="createInquiryBtn">
         <span class="icon-plus">+</span>
-        공지사항 작성
+        문의사항 등록
       </button>
     </div>
 
-    <section class="community-stats">
+    <section class="inquiry-stats">
       <div class="stat-card">
         <div class="stat-icon stat-icon-notification">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -58,75 +58,93 @@
         </div>
         <span class="stat-badge">+12</span>
       </div>
+      </div>
     </section>
 
-    <nav class="community-tabs">
-      <button class="tab-btn tab-btn-active">공지사항</button>
-      <button class="tab-btn">문의사항</button>
+    <nav class="inquiry-tabs">
+      <button class="tab-btn">공지사항</button>
+      <button class="tab-btn tab-btn-active">문의사항</button>
     </nav>
 
-    <div class="community-search">
-      <input type="text" class="search-input" placeholder="공지사항 검색...">
-      <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
-        <path d="m13 13 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </div>
+    <nav class="inquiry-filter-tabs">
+      <button class="filter-tab filter-tab-active">전체</button>
+      <button class="filter-tab">신청</button>
+      <button class="filter-tab">반려</button>
+    </nav>
 
-    <section class="notice-list">
-      <article class="notice-item" data-notice-id="1">
-        <div class="notice-header">
-          <span class="notice-badge notice-badge-urgent">중요</span>
-          <span class="notice-badge notice-badge-system">시스템</span>
-          <span class="notice-views">조회 245</span>
+    <section class="inquiry-list">
+      <article class="inquiry-item" data-inquiry-id="1">
+        <div class="inquiry-item-header">
+          <div class="inquiry-badges">
+            <span class="inquiry-badge inquiry-badge-status">대기중</span>
+            <span class="inquiry-badge inquiry-badge-category">시설</span>
+            <span class="inquiry-badge inquiry-badge-urgent">긴급</span>
+          </div>
+          <span class="inquiry-date">2025-10-28 09:30</span>
         </div>
-        <h3 class="notice-title">10월 정기 시스템 점검 안내</h3>
-        <p class="notice-description">10월 30일 02:00 - 06:00 시스템 점검이 진행됩니다.</p>
-        <div class="notice-footer">
-          <span class="notice-author">관리자</span>
-          <span class="notice-date">2025-10-28</span>
+
+        <div class="inquiry-user">
+          <div class="user-avatar">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" fill="#e0e0e0"/>
+              <circle cx="10" cy="8" r="3" fill="#757575"/>
+              <path d="M4 16c0-3 2.5-5 6-5s6 2 6 5" fill="#757575"/>
+            </svg>
+          </div>
+          <div class="user-info">
+            <span class="user-name">이영희</span>
+            <span class="user-id">안과/의사_#0002</span>
+          </div>
         </div>
+
+        <h3 class="inquiry-item-title">수술 예약승인 재발급 요청</h3>
+        <p class="inquiry-description">10월 20일에 발급한 예약 건을 분실하여 수술승인을 재발급 요청합니다.</p>
+
+        <button class="btn-view-inquiry">상세보기</button>
       </article>
 
-      <article class="notice-item" data-notice-id="2">
-        <div class="notice-header">
-          <span class="notice-badge notice-badge-general">소식</span>
-          <span class="notice-views">조회 182</span>
+      <article class="inquiry-item" data-inquiry-id="2">
+        <div class="inquiry-item-header">
+          <div class="inquiry-badges">
+            <span class="inquiry-badge inquiry-badge-status-progress">진행중</span>
+            <span class="inquiry-badge inquiry-badge-category">시설</span>
+            <span class="inquiry-badge inquiry-badge-normal">일반</span>
+          </div>
+          <span class="inquiry-date">2025-10-27 14:22</span>
         </div>
-        <h3 class="notice-title">신규 MRI 장비 도입 안내</h3>
-        <p class="notice-description">11월부터 최신 MRI 장비가 도입되어 더 나은 서비스를 제공합니다.</p>
-        <div class="notice-footer">
-          <span class="notice-author">시설관리팀</span>
-          <span class="notice-date">2025-10-22</span>
-        </div>
-      </article>
 
-      <article class="notice-item" data-notice-id="3">
-        <div class="notice-header">
-          <span class="notice-badge notice-badge-urgent">중요</span>
-          <span class="notice-badge notice-badge-event">이벤트</span>
-          <span class="notice-views">조회 319</span>
+        <div class="inquiry-user">
+          <div class="user-avatar">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="8" fill="#e0e0e0"/>
+              <circle cx="10" cy="8" r="3" fill="#757575"/>
+              <path d="M4 16c0-3 2.5-5 6-5s6 2 6 5" fill="#757575"/>
+            </svg>
+          </div>
+          <div class="user-info">
+            <span class="user-name">김민준</span>
+            <span class="user-id">내과/간호사_#0045</span>
+          </div>
         </div>
-        <h3 class="notice-title">직원 시간 변경 안내 (2차수정내)</h3>
-        <p class="notice-description">명절일의 이슈로 일시적 업무 시간이 변경됩니다.</p>
-        <div class="notice-footer">
-          <span class="notice-author">인사총무팀</span>
-          <span class="notice-date">2025-10-20</span>
-        </div>
+
+        <h3 class="inquiry-item-title">MRI 장비 예약 문의</h3>
+        <p class="inquiry-description">11월 첫째주 MRI 장비 예약 가능 일정을 확인하고 싶습니다.</p>
+
+        <button class="btn-view-inquiry">상세보기</button>
       </article>
     </section>
   </main>
 
-  <!-- 공지사항 상세 모달 -->
-  <div class="modal-overlay" id="detailModal">
-    <div class="notice-detail-modal">
+  <!-- 문의사항 상세보기 모달 -->
+  <div class="modal-overlay" id="inquiryDetailModal">
+    <div class="inquiry-detail-modal">
       <div class="modal-header">
         <div class="modal-title-section">
           <svg class="modal-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" stroke="#00897b" stroke-width="2"/>
-            <path d="M10 6v4M10 14h.01" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
+            <rect x="3" y="4" width="14" height="12" rx="2" stroke="#00897b" stroke-width="2"/>
+            <path d="M3 8h14M7 4v4M13 4v4" stroke="#00897b" stroke-width="2"/>
           </svg>
-          <h2 class="modal-title">공지사항</h2>
+          <h2 class="modal-title">문의사항 상세</h2>
         </div>
         <button class="modal-close-btn" id="closeDetailModal">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -136,221 +154,102 @@
       </div>
 
       <div class="modal-content">
-        <nav class="modal-tabs">
-          <button class="modal-tab modal-tab-active">중요</button>
-          <button class="modal-tab">시스템</button>
-        </nav>
-
-        <article class="notice-detail">
-          <h3 class="notice-detail-title" id="modalTitle"></h3>
-          
-          <div class="notice-meta">
-            <div class="meta-item">
-              <span class="meta-label">작성자:</span>
-              <span class="meta-value" id="modalAuthor"></span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">등록일:</span>
-              <span class="meta-value" id="modalDate"></span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">조회수:</span>
-              <span class="meta-value" id="modalViews"></span>
+        <section class="inquiry-user-section">
+          <div class="user-profile">
+            <div class="user-avatar-large" id="modalUserAvatar">이</div>
+            <div class="user-details">
+              <h3 class="user-name-large" id="modalUserName">이영희</h3>
+              <span class="user-department" id="modalUserDept">안과/의사_#0002</span>
             </div>
           </div>
+          <div class="user-badges">
+            <span class="badge badge-department">안과</span>
+            <span class="badge badge-role">의사</span>
+          </div>
+        </section>
 
-          <div class="notice-content" id="modalContent"></div>
-        </article>
+        <section class="inquiry-contact-section">
+          <div class="contact-item">
+            <span class="contact-label">연락처:</span>
+            <span class="contact-value" id="modalPhone">010-2345-6789</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">이메일:</span>
+            <span class="contact-value" id="modalEmail">yhlee@email.com</span>
+          </div>
+        </section>
+
+        <div class="inquiry-datetime">
+          <span class="datetime-label">일시</span>
+          <span class="datetime-value" id="modalDatetime">2025-10-27 14:20</span>
+        </div>
+
+        <div class="inquiry-title-section">
+          <h3 class="inquiry-subject" id="modalSubject">수술 예약승인 재발급 요청</h3>
+        </div>
+
+        <div class="inquiry-content-section">
+          <h4 class="content-label">문의 내용</h4>
+          <div class="inquiry-content" id="modalContentText">
+            <p>안녕하세요.</p>
+            <p>지난 10월 20일에 발급한 예약 건을 분실하여 수술승인을 재발급 요청합니다.</p>
+            <p>요청일: 2025년 10월 20일</p>
+            <p>요청 사항: 수술 안전 재기 발급 예방승인 요청</p>
+          </div>
+        </div>
       </div>
 
       <div class="modal-footer">
-        <button class="btn-primary" id="confirmDetailModal">확인</button>
+        <button class="btn-secondary" id="cancelDetailModal">취소</button>
+        <button class="btn-primary" id="answerInquiry">답변 등록</button>
       </div>
-    </div>
-  </div>
-
-  <!-- 공지사항 작성 모달 -->
-  <div class="modal-overlay" id="createModal">
-    <div class="notice-create-modal">
-      <div class="modal-header">
-        <div class="modal-title-section">
-          <svg class="modal-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16Z" stroke="#00897b" stroke-width="2"/>
-            <path d="M10 6v4M10 14h.01" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <h2 class="modal-title">공지사항 작성</h2>
-        </div>
-        <button class="modal-close-btn" id="closeCreateModal">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M18 6 6 18M6 6l12 12" stroke="#757575" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
-
-      <form class="notice-form" id="noticeForm">
-        <div class="form-row">
-          <div class="form-group form-group-target">
-            <label class="form-label">
-              <span class="label-text">대상</span>
-            </label>
-            <select class="form-select">
-              <option value="all">전체</option>
-              <option value="patient">환자</option>
-              <option value="employee">직원</option>
-            </select>
-          </div>
-
-          <div class="form-group form-group-category">
-            <label class="form-label">
-              <span class="label-text">부서</span>
-            </label>
-            <select class="form-select">
-              <option value="">부서1</option>
-              <option value="">부서2</option>
-              <option value="">부서3</option>
-              <option value="">부서4</option>
-            </select>
-          </div>
-
-          <div class="form-group form-group-priority">
-            <label class="form-label">
-              <span class="label-text">중요도</span>
-            </label>
-            <select class="form-select">
-              <option value="">중요도</option>
-              <option value="high">높음</option>
-              <option value="medium">보통</option>
-              <option value="low">낮음</option>
-            </select>
-          </div>
-
-          <div class="form-group form-group-type">
-            <label class="form-label">
-              <span class="label-text">분류</span>
-            </label>
-            <select class="form-select">
-              <option value="">분류</option>
-              <option value="urgent">긴급</option>
-              <option value="general">일반</option>
-              <option value="info">정보</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit" class="btn-submit">공지사항 등록</button>
-      </form>
     </div>
   </div>
 
   <script>
-    // 공지사항 데이터
-    const noticeData = {
+    // 문의사항 데이터
+    const inquiryData = {
       1: {
-        title: '10월 정기 시스템 점검 안내',
-        author: '관리자',
-        date: '2025-10-25',
-        views: 245,
+        userName: '이영희',
+        userDept: '안과/의사_#0002',
+        userAvatar: '이',
+        phone: '010-2345-6789',
+        email: 'yhlee@email.com',
+        datetime: '2025-10-28 09:30',
+        subject: '수술 예약승인 재발급 요청',
         content: `
-          <p class="notice-greeting">안녕하세요, 시설 예약팀입니다.</p>
-          
-          <p class="notice-text">
-            병원 운영 병원 ERP 시스템(구. "시설 예약 MediFlow™") 연장작업 서비스 안정성 제고하고 시스템 성능을 최적화하기 위해 아래와 같이 정기 시스템 점검을 실시할 예정입니다.
-          </p>
-
-          <p class="notice-text">
-            점검 시간 동안에는 시스템 이용이 일시적으로 중단되오니, 이용에 불편이 없으시도록 미리 양지하여 주시길 바랍니다.
-          </p>
-
-          <div class="notice-section">
-            <h4 class="section-title">■ 점검 일시</h4>
-            <ul class="section-list">
-              <li>- 일시: 2025년 10월 30일 (수) 02:00 ~ 06:00 (총 4시간)</li>
-              <li>- 대상: MedFlow™ ERP 전체 시스템</li>
-            </ul>
-          </div>
-
-          <div class="notice-section">
-            <h4 class="section-title">╲ 점검 내용</h4>
-            <ul class="section-list">
-              <li>- 데이터베이스 백업 및 최적화</li>
-              <li>- 보안 패치 업데이트</li>
-            </ul>
-          </div>
+          <p>안녕하세요.</p>
+          <p>지난 10월 20일에 발급한 예약 건을 분실하여 수술승인을 재발급 요청합니다.</p>
+          <p>요청일: 2025년 10월 20일</p>
+          <p>요청 사항: 수술 안전 재기 발급 예방승인 요청</p>
         `
       },
       2: {
-        title: '신규 MRI 장비 도입 안내',
-        author: '시설관리팀',
-        date: '2025-10-22',
-        views: 182,
+        userName: '김민준',
+        userDept: '내과/간호사_#0045',
+        userAvatar: '김',
+        phone: '010-9876-5432',
+        email: 'kmj@email.com',
+        datetime: '2025-10-27 14:22',
+        subject: 'MRI 장비 예약 문의',
         content: `
-          <p class="notice-greeting">안녕하세요, 시설관리팀입니다.</p>
-          
-          <p class="notice-text">
-            11월부터 최신 MRI 장비가 도입되어 더 나은 서비스를 제공합니다.
-          </p>
-
-          <div class="notice-section">
-            <h4 class="section-title">■ 도입 장비</h4>
-            <ul class="section-list">
-              <li>- 장비명: 최신 3.0T MRI 시스템</li>
-              <li>- 도입 시기: 2025년 11월 1일</li>
-              <li>- 위치: 본관 2층 영상의학과</li>
-            </ul>
-          </div>
-
-          <div class="notice-section">
-            <h4 class="section-title">╲ 주요 특징</h4>
-            <ul class="section-list">
-              <li>- 고해상도 영상 제공</li>
-              <li>- 검사 시간 단축 (기존 대비 30% 감소)</li>
-              <li>- 환자 편의성 증대</li>
-            </ul>
-          </div>
-        `
-      },
-      3: {
-        title: '직원 시간 변경 안내 (2차수정내)',
-        author: '인사총무팀',
-        date: '2025-10-20',
-        views: 319,
-        content: `
-          <p class="notice-greeting">안녕하세요, 인사총무팀입니다.</p>
-          
-          <p class="notice-text">
-            명절일의 이슈로 일시적 업무 시간이 변경됩니다. 모든 직원분들께서는 아래 변경된 일정을 확인해 주시기 바랍니다.
-          </p>
-
-          <div class="notice-section">
-            <h4 class="section-title">■ 변경 내용</h4>
-            <ul class="section-list">
-              <li>- 기존: 09:00 ~ 18:00</li>
-              <li>- 변경: 10:00 ~ 19:00</li>
-              <li>- 적용 기간: 2025년 10월 25일 ~ 10월 27일 (3일간)</li>
-            </ul>
-          </div>
-
-          <div class="notice-section">
-            <h4 class="section-title">╲ 참고사항</h4>
-            <ul class="section-list">
-              <li>- 점심시간은 기존과 동일합니다 (12:00 ~ 13:00)</li>
-              <li>- 외래 진료 시간도 동일하게 변경됩니다</li>
-              <li>- 응급실은 24시간 정상 운영됩니다</li>
-            </ul>
-          </div>
+          <p>안녕하세요.</p>
+          <p>11월 첫째주 MRI 장비 예약 가능 일정을 확인하고 싶습니다.</p>
+          <p>환자명: 박순자</p>
+          <p>희망 날짜: 2025년 11월 1일 ~ 11월 5일</p>
+          <p>검사 종류: 뇌 MRI</p>
+          <p>빠른 회신 부탁드립니다.</p>
         `
       }
     };
 
     // DOM 요소
-    const detailModal = document.getElementById('detailModal');
-    const createModal = document.getElementById('createModal');
-    const createNoticeBtn = document.getElementById('createNoticeBtn');
+    const detailModal = document.getElementById('inquiryDetailModal');
+    const createInquiryBtn = document.getElementById('createInquiryBtn');
     const closeDetailModalBtn = document.getElementById('closeDetailModal');
-    const closeCreateModalBtn = document.getElementById('closeCreateModal');
-    const confirmDetailModalBtn = document.getElementById('confirmDetailModal');
-    const noticeItems = document.querySelectorAll('.notice-item');
-    const noticeForm = document.getElementById('noticeForm');
+    const cancelDetailModalBtn = document.getElementById('cancelDetailModal');
+    const answerInquiryBtn = document.getElementById('answerInquiry');
+    const inquiryItems = document.querySelectorAll('.inquiry-item');
 
     // 모달 열기/닫기 함수
     function openModal(modal) {
@@ -364,31 +263,38 @@
     }
 
     // 상세 모달 열기
-    function openDetailModal(noticeId) {
-      const notice = noticeData[noticeId];
+    function openDetailModal(inquiryId) {
+      const inquiry = inquiryData[inquiryId];
       
-      if (!notice) return;
+      if (!inquiry) return;
       
-      document.getElementById('modalTitle').textContent = notice.title;
-      document.getElementById('modalAuthor').textContent = notice.author;
-      document.getElementById('modalDate').textContent = notice.date;
-      document.getElementById('modalViews').textContent = notice.views;
-      document.getElementById('modalContent').innerHTML = notice.content;
+      // 모달 내용 업데이트
+      document.getElementById('modalUserAvatar').textContent = inquiry.userAvatar;
+      document.getElementById('modalUserName').textContent = inquiry.userName;
+      document.getElementById('modalUserDept').textContent = inquiry.userDept;
+      document.getElementById('modalPhone').textContent = inquiry.phone;
+      document.getElementById('modalEmail').textContent = inquiry.email;
+      document.getElementById('modalDatetime').textContent = inquiry.datetime;
+      document.getElementById('modalSubject').textContent = inquiry.subject;
+      document.getElementById('modalContentText').innerHTML = inquiry.content;
       
       openModal(detailModal);
     }
 
-    // 공지사항 아이템 클릭 이벤트
-    noticeItems.forEach(item => {
-      item.addEventListener('click', function() {
-        const noticeId = this.getAttribute('data-notice-id');
-        openDetailModal(noticeId);
+    // 문의사항 아이템 클릭 이벤트
+    inquiryItems.forEach(item => {
+      const viewBtn = item.querySelector('.btn-view-inquiry');
+      viewBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const inquiryId = item.getAttribute('data-inquiry-id');
+        openDetailModal(inquiryId);
       });
     });
 
-    // 공지사항 작성 버튼 클릭
-    createNoticeBtn.addEventListener('click', () => {
-      openModal(createModal);
+    // 문의사항 등록 버튼 클릭 (문의사항 작성 모달로 연결 - 추후 구현)
+    createInquiryBtn.addEventListener('click', () => {
+      alert('문의사항 등록 기능은 추후 구현 예정입니다.');
+      // 실제로는 문의사항 작성 모달을 여는 코드가 들어갑니다
     });
 
     // 상세 모달 닫기 버튼
@@ -396,26 +302,16 @@
       closeModal(detailModal);
     });
 
-    // 상세 모달 확인 버튼
-    confirmDetailModalBtn.addEventListener('click', () => {
+    // 취소 버튼
+    cancelDetailModalBtn.addEventListener('click', () => {
       closeModal(detailModal);
     });
 
-    // 작성 모달 닫기 버튼
-    closeCreateModalBtn.addEventListener('click', () => {
-      closeModal(createModal);
-    });
-
-    // 공지사항 작성 폼 제출
-    noticeForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      // 여기에 실제 제출 로직 추가
-      alert('공지사항이 등록되었습니다.');
-      
-      // 폼 초기화 및 모달 닫기
-      noticeForm.reset();
-      closeModal(createModal);
+    // 답변 등록 버튼
+    answerInquiryBtn.addEventListener('click', () => {
+      // 실제로는 답변 등록 폼이나 모달을 여는 코드가 들어갑니다
+      alert('답변이 등록되었습니다.');
+      closeModal(detailModal);
     });
 
     // 오버레이 클릭 시 닫기
@@ -425,22 +321,39 @@
       }
     });
 
-    createModal.addEventListener('click', (e) => {
-      if (e.target === createModal) {
-        closeModal(createModal);
-      }
-    });
-
     // ESC 키로 닫기
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         if (detailModal.classList.contains('active')) {
           closeModal(detailModal);
         }
-        if (createModal.classList.contains('active')) {
-          closeModal(createModal);
-        }
       }
+    });
+
+    // 필터 탭 기능
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        filterTabs.forEach(t => t.classList.remove('filter-tab-active'));
+        this.classList.add('filter-tab-active');
+        
+        // 실제로는 여기서 필터링 로직이 들어갑니다
+        const filterType = this.textContent;
+        console.log('필터 적용:', filterType);
+      });
+    });
+
+    // 메인 탭 기능
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        tabBtns.forEach(b => b.classList.remove('tab-btn-active'));
+        this.classList.add('tab-btn-active');
+        
+        // 실제로는 여기서 페이지 전환 로직이 들어갑니다
+        const tabName = this.textContent;
+        console.log('탭 전환:', tabName);
+      });
     });
   </script>
 </body>
